@@ -1,1 +1,267 @@
 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>我的简历</title>
+        <style>
+            :root {
+                --color-white: #FFFFFF;
+                --color-black: #000000;
+                --color-darkgray: #333333;
+                --color-gray: #5D5D5D;
+                --color-lightgray: #999999;
+                --color-text: var(--color-darkgray);
+                --color-graytext: var(--color-gray);
+                --color-lighttext: var(--color-lightgray);
+                --color-awesome: #DC3522;
+                --font-size-base: 16px;
+                --spacing-unit: 1rem;
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Source Sans Pro', sans-serif;
+                font-size: var(--font-size-base);
+                line-height: 1.5;
+                color: var(--color-text);
+                background: var(--color-white);
+                padding: 2rem;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
+            /* .cv-header {
+                text-align: center;
+                margin-bottom: 2rem;
+            } */
+
+            .cv-name {
+                display: flex;
+                justify-content: center;
+                align-items: baseline;
+                gap: 0.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .firstname {
+                font-size: 2rem;
+                font-weight: 300;
+                color: var(--color-graytext);
+            }
+
+            .lastname {
+                font-size: 2rem;
+                font-weight: 700;
+                color: var(--color-text);
+            }
+
+            .position {
+                font-size: 0.9rem;
+                text-transform: uppercase;
+                color: var(--color-awesome);
+                margin-bottom: 0.5rem;
+            }
+
+            .contact-info {
+                font-size: 0.8rem;
+                color: var(--color-lighttext);
+            }
+
+            .section {
+                margin-bottom: 2rem;
+            }
+
+            .section-title {
+                font-size: 1.25rem;
+                font-weight: 700;
+                color: var(--color-awesome);
+                text-transform: uppercase;
+                margin-bottom: 1rem;
+                position: relative;
+            }
+
+            .section-title::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -0.25rem;
+                width: 100%;
+                height: 0.15rem;
+                background-color: var(--color-awesome);
+                opacity: 0.3;
+            }
+
+            .entry {
+                margin-bottom: 1.5rem;
+            }
+
+            .entry-title {
+                font-weight: 700;
+                margin-bottom: 0.25rem;
+            }
+            .entry-title-small {
+                font-weight: 500;
+                margin-bottom: 0.25rem;
+            }
+
+            .entry-info {
+                display: flex;
+                justify-content: space-between;
+                font-size: 0.9rem;
+                color: var(--color-graytext);
+                margin-bottom: 0.5rem;
+            }
+
+            .entry-description {
+                font-size: 0.9rem;
+                color: var(--color-text);
+            }
+
+            @media (max-width: 768px) {
+                body {
+                    padding: 1rem;
+                }
+
+                .entry-info {
+                    flex-direction: column;
+                    gap: 0.25rem;
+                }
+            }
+            .blue-link {
+                color: blue;
+                text-decoration: none; /* 移除下划线 */
+            }
+            .blue-link:hover {
+                text-decoration: underline; /* 悬停时显示下划线 */
+            }
+            .cv-header {
+                text-align: center;
+                margin-bottom: 2rem;
+                position: relative;
+                padding: 1rem;
+            }
+
+            .photo-container {
+                width: 120px;
+                height: 120px;
+                position: absolute;
+                overflow: hidden;
+            }
+
+            .photo-container.left {
+                left: 0;
+            }
+
+            .photo-container.right {
+                right: 0;
+            }
+
+            .photo-container.circle {
+                border-radius: 50%;
+            }
+
+            .photo-container.rectangle {
+                border-radius: 3px;
+            }
+
+            .photo-container.edge {
+                border: 3px solid var(--color-awesome);
+            }
+
+            .photo-container img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            /* Adjust header layout when photo is present */
+            .has-photo {
+                padding-left: 140px; /* When photo is on the left */
+            }
+
+            .has-photo.photo-right {
+                padding-left: 0;
+                padding-right: 140px;
+            }
+
+            @media (max-width: 768px) {
+                .cv-header {
+                    padding: 0;
+                }
+
+                .photo-container {
+                    position: relative;
+                    margin: 0 auto 1rem auto;
+                }
+
+                .has-photo, .has-photo.photo-right {
+                    padding: 0;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header class="cv-header">
+            <!-- Photo container with configurable options -->
+            <div class="photo-container left circle edge">
+                <!-- Replace src with actual photo path -->
+                <img src="./lwy.jpg" alt="Profile Photo">
+            </div>
+            <div class="cv-name">
+                <span class="firstname">张</span>
+                <span class="lastname">三</span>
+            </div>
+            <div class="position">Doctor of Philosophy • Computer Science</div>
+            <div class="contact-info">
+                📍 Ocean University of China, Laoshan District, Qingdao, Shandong Province • 📱 (+86) 15610523026 • 📧 Wenyuan.Li@colostate.edu
+            </div>
+        </header>
+
+        <main>
+            <section class="section">
+                <h2 class="section-title">Education</h2>
+                <div class="entry">
+                    <h3 class="entry-title">Ocean University of China (OUC)</h3>
+                    <div class="entry-info">
+                        <span>Ph.D. in Computer Science and Technology</span>
+                        <span>Qingdao, China, Sep. 2020 - Dec. 2024</span>
+                    </div>
+                    <div class="entry-description">
+                        Description of your education and achievements
+                    </div>
+                </div>
+                <div class="entry">
+                    <h3 class="entry-title">Shandong University of Science and Technology (SDUST)</h3>
+                    <div class="entry-info">
+                        <span>B.Sc. and M.Sc. in Electrical Engineering</span>
+                        <span>Qingdao, China, Sep. 2013 - Jul. 2020</span>
+                    </div>
+                    <div class="entry-description">
+                        Description of your education and achievements
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Publications</h2>
+                <div class="entry">
+                    <h4 class="entry-title"><a href="https://example.com" class="blue-link">[1]</a> StarNet: A Deep Learning Model for Enhancing Polarimetric Radar Quantitative Precipitation Estimation</h4>
+                    <div class="entry-info">
+                        <span>Wenyuan Li, Haonan Chen, Lei Han, Wen-Chau Lee</span>
+                        <span>IEEE Transactions on Geoscience and Remote Sensing (TGRS), IF=7.5, </span>
+                    </div>
+                    <div class="entry-description">
+                        Description of your responsibilities and achievements
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
