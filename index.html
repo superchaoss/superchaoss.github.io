@@ -1,431 +1,549 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+    <title>新年快乐</title>
+  </head>
+  <body>
+    <canvas class="canvas"></canvas>
+    <div class="overlay">
+      <div class="tabs">
+        <div class="tabs-labels"><span class="tabs-label">Commands</span><span class="tabs-label">Info</span><span class="tabs-label">Share</span></div>
+        <div class="tabs-panels">
+          <ul class="tabs-panel commands">
+            <li class="commands-item"><span class="commands-item-title">Text</span><span class="commands-item-info" data-demo="Hello :)">Type anything</span><span class="commands-item-action">Demo</span></li>
+            <li class="commands-item"><span class="commands-item-title">Countdown</span><span class="commands-item-info" data-demo="#countdown 10">#countdown<span class="commands-item-mode">number</span></span><span class="commands-item-action">Demo</span></li>
+            <li class="commands-item"><span class="commands-item-title">Icon</span><span class="commands-item-info" data-demo="#icon thumbs-up">#icon<span class="commands-item-mode">name</span>&nbsp;(using <a href="//fortawesome.github.io/Font-Awesome/#icons-new" target="_blank">Font Awesome</a>)</span><span class="commands-item-action">Demo</span></li>
+            <li class="commands-item"><span class="commands-item-title">Time</span><span class="commands-item-info" data-demo="#time">#time</span><span class="commands-item-action">Demo</span></li>
+            <li class="commands-item"><span class="commands-item-title">Rectangle</span><span class="commands-item-info" data-demo="#rectangle 30x15">#rectangle<span class="commands-item-mode">width x height</span></span><span class="commands-item-action">Demo</span></li>
+            <li class="commands-item"><span class="commands-item-title">Circle</span><span class="commands-item-info" data-demo="#circle 25">#circle<span class="commands-item-mode">diameter</span></span><span class="commands-item-action">Demo</span></li>
+            <li class="commands-item commands-item--gap"><span class="commands-item-title">Animate</span><span class="commands-item-info" data-demo="The time is|#time|#countdown 3|#icon thumbs-up"><span class="commands-item-mode">command1</span>&nbsp;|<span class="commands-item-mode">command2</span></span><span class="commands-item-action">Demo</span></li>
+          </ul>
+          <div class="tabs-panel ui-details">
+            <div class="ui-details-content">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <audio  src="https://music.163.com/song/media/outer/url?id=524148556.mp3" autoplay muted></audio>
 
-
-<!doctype html>
-<html>
-<head>
-    <link rel="shortcut icon" href="//www.sogou.com/images/logo/new/favicon.ico?v=4" type="image/x-icon">
-    <link href="//dlweb.sogoucdn.com/logo/images/2018/apple-touch-icon.png" id="apple-touch-icon" rel="apple-touch-icon-precomposed"/>
-    <link href="//www.sogou.com/sug/css/m3.min.v.7.css" rel="stylesheet" type="text/css">
-    <link href="/new/pc/css/weixin-public-20230731.css" rel="stylesheet" type="text/css">
-    
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="Access-Control-Allow-Origin" content="*">
-    <meta content="width=device-width,initial-scale=1.0" id="vp" name="viewport">
-    <title>高考的相关微信公众号文章 – 搜狗微信搜索</title>
-    
-    <script>
-        var sst = {h_s :(new Date()).getTime()};
-        var newpage = 1;
-        var passportUserId = "";
-        var oldQuery = "高考";
-        var gbkQuery = "%B8%DF%BF%BC";
-        var uuid = "92072699-6b0b-41ad-9311-4dcc56775c93";
-        var keywords_string = "高考";
-        var sab = "0";
-        var keywords = oldQuery.split(' ');
-        var now = 1735119946649;
-        var idc = "sjs";
-        var clientIp = "112.9.104.203";
-        var isIpad = false;
-        //var article_anti_url = "";
-        var  ssToken = "7ADA241113B0D0A8D8DEF3CDCE13B280D9A722D0676BD44A";
-    </script>
-    <script>
-        //以下为动态的全局 js，防止外部网站通过 window.opener.location 篡改我们的页面，以后不要通过 window.location 获取当前地址，只能用 document.location
-        
-    </script>
-    <script src="/js/jquery-1.11.0.min.js" charset="gbk"></script>
-    <script src="/new/pc/js/https_util.min.js?v=20180607"></script>
-    <script src="/js/lib/juicer-min.js"></script>
-    <script src="/new/weixin/js/common.min.js?v=20200414"></script>
-    <script src="/new/pc/js/common.min.js?v=20180607"></script>
-    
-    <script>
-        var uigs_para = {
-            "uigs_t": "1735119946649",
-            "uigs_productid": "vs_web",
-            "terminal"      : "web",
-            "vstype"        : "weixin",
-            "pagetype"      : "result",
-            "channel"       : "result_article",
-            "s_from"        : "input",
-            "sourceid"      : "sugg",
-            "type"          : "weixin_search_pc",
-            "uigs_cookie"   : "SUID,sct",
-            "uuid"          : "92072699-6b0b-41ad-9311-4dcc56775c93",
-            "query"         : "高考",
-            "weixintype"    : "2",
-            "exp_status"    : "-1",
-            "exp_id_list"   : "0_0",
-            "wuid"          : "00514C43700968876767BE2CC624C095",
-            "snuid"         : "13B0D0A8D8DEF3CDCE13B280D9A722D0",
-            "rn"            : 1,
-            "login"         : passportUserId ? "1" : "0",
-            "uphint"        : 0,
-            "bottomhint"    : 0,
-            "page"          : "1"
-        };
-        $.get('/approve?uuid=' + window.uigs_para.uuid + '&token=' + "7ADA241113B0D0A8D8DEF3CDCE13B280D9A722D0676BD44A" + '&from=search');
-    </script>
-</head>
-<body>
-    
-
-<!--start header-->
-<div class="header-box">
-    
-    <div class="login-info">
-        <a href="javascript:void(0)" id="cniil_wza" style="text-decoration: none;color: #999;padding-right: 20px;border-right: 1px solid #e7e7e7;line-height: 14px;margin-right: 20px;">无障碍</a>
-        <a id="top_login" href="javascript:void(0);" uigs="home_login_top">登录</a>
-    </div>
-
-    <div class="header" id="scroll-header">
-        <a title="回到搜狗首页" href="/" name="scroll-nav" class="logo" uigs="home"></a>
-        <ul class="searchnav" name="scroll-nav">
-            <li><a id="sogou_xinwen" href="https://www.sogou.com/sogou?ie=utf8&p=40230447&interation=1728053249&interV=&pid=sogou-wsse-7050094b04fd9aa3&query=高考" onclick="navBar(this,'query=');" uigs="nav_xinwen">资讯</a></li>
-            <li><a id="sogou_wangye" href="http://www.sogou.com/web?ie=utf8&query=高考" onclick="navBar(this,'query=');" uigs="nav_wangye">网页</a></li>
-            <li class="cur"><a href="javascript:void(0)">微信</a></li>
-            <li><a id="sogou_zhihu" href="http://zhihu.sogou.com/zhihu?ie=utf8&p=73351201&query=高考" onclick="navBar(this,'query=')" uigs="nav_zhihu">知乎</a></li>
-            <li><a id="sogou_tupian" href="http://pic.sogou.com/pics?ie=utf8&p=40230504&query=高考" onclick="navBar(this,'query=')" uigs="nav_tupian">图片</a></li>
-            <li><a id="sogou_shipin" href="https://v.sogou.com/v?ie=utf8&p=40230608&query=高考" onclick="navBar(this,'query=')" uigs="nav_shipin">视频</a></li>
-            <li><a id="sogou_mingyi" href="https://www.sogou.com/web?m2web=mingyi.sogou.com&ie=utf8&query=高考" onclick="navBar(this,'query=')" uigs="nav_mingyi">医疗</a></li>
-            <li><a id="sogou_hanyu" href="https://hanyu.sogou.com/result?query=高考" onclick="navBar(this,'query=')" uigs="nav_hanyu">汉语</a></li>
-            <li><a id="sogou_fanyi" href="https://fanyi.sogou.com/text?ie=utf8&keyword=高考" onclick="navBar(this,'keyword=')" uigs="nav_fanyi">翻译</a></li>
-            <li><a id="sogou_wenwen" href="http://wenwen.sogou.com/s/?ch=weixinsearch&w=高考" data-index="http://wenwen.sogou.com/?ch=weixinsearch" onclick="navBar(this,'w=')" uigs="nav_wenwen">问问</a></li>
-            <li><a id="sogou_baike" href="https://www.sogou.com/sogou?ie=utf8&insite=baike.sogou.com&pid=sogou-wsse-17737832ac17be52&query=高考" onclick="navBar(this,'query=')" uigs="nav_baike">百科</a></li>
-            <li><a id="top_more" href="http://www.sogou.com/docs/more.htm?v=1" target="_blank" uigs="nav_more">更多>></a></li>
-        </ul>
-        
-
-<form name="searchForm" action="/weixin">
-    <div class="querybox">
-        <div class="qborder">
-            <div class="qborder2">
-                <input type="hidden" name="type" value="2"/>
-                <input type="hidden" name="s_from" value="input"/>
-                <input type="text" class="query" name="query" id="query" ov="高考" value="高考" autocomplete="off"/>
-                
-                    <input type="hidden" name="ie" value="utf8"/>
-                
-                <a href="javascript:void(0)" class="qreset2" name="reset" uigs="search_reset"></a>
-            </div>
-        </div>
-        <input type="button" value="搜文章" class="swz" onclick="search(this,2)" uigs="search_article"/>
-        <input type="hidden" name="_sug_" value="n"/>
-        <input type="hidden" name="_sug_type_" value=""/>
-    </div>
-</form>
-    </div>
-</div>
-<!--end header-->
-    
-    <div class="wrapper" id="wrapper">
-        <div class="main-left" id="main">
-            
-<div class="dy-pop2 dy-pop5 float" id="erweima_box" style="display: none"></div>
-<script type="text/template" id="erweima_tpl">
-    <a href="javascript:void(0)" class="close" data-except="1" uigs="other_float_weixin_close"></a>
-    <div class="fxico-box2">微信扫一扫关注<br/><img width="104" height="104" src="${imgsrc}"/></div>
-</script>
-            
-
-<script>
-    //高级工具参数对象
-    var toolParas = {
-        tsn : '0',
-        ft : '',
-        et : '',
-        interation : '',
-        wxid : '',
-        usip : ''
-    };
-    var from_tool = '0';
-</script>
-<div class="wx-topbox">
-    <div class="all-time">
-        <div class="all-time-y2 ">
-            <div class="all-time-y all-time-y-v1" id="text">
-                以下内容来自微信公众平台
-            </div>
-            
-        </div>
-    </div>
-</div>
-
-
-
-
-<div class="news-box">
-    
-<ul class="news-list">
-	
-		<!-- a -->
-		<li id="sogou_vr_11002601_box_0" d="ab735a258a90e8e1-6bee54fcbd896b2a-79b4102e71eb05293b4ef72579ccaf24">
-<div class="img-box">
-<a data-z="art" target="_blank" id="sogou_vr_11002601_img_0" href="/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzPl4VzvErOTbivvQVu4bBhZQPCbvZOQGVqXa8Fplpd9gpbZ13sMy0YKBuawO4Al9p6sXm9nzUrsDuK8RrZooAi_yZrgSVQXesEopzirXgiufbkWKS4_-eJS7OsgmofcjA8RUvnXa1ogrCv4zeEunZkxZsofBsfXl-p735WGLxpNJJa-ID4v1TZVaWYnRjPB_P8hLSaRG75eE9Gdch3BsRJ6VKrzu_4XKA..&amp;type=2&amp;query=%E9%AB%98%E8%80%83&amp;token=7ADA241113B0D0A8D8DEF3CDCE13B280D9A722D0676BD44A" uigs="article_image_0"><img src="//img01.sogoucdn.com/v2/thumb?appid=201147&amp;url=https%3A%2F%2Fmmbiz.qpic.cn%2Fsz_mmbiz_jpg%2F1YS5yicdcpJMJ2Vic7WCW1gQibRnkn4koUnia1Ksh7n1NqnhS1hdXT7lHibP9tYicOO3yF5XT2QWaQeibIOyma3wCZPWA%2F0%3Fwx_fmt%3Djpeg&amp;sign=30acffcd3035e90caacfdd496052bef3" onload="resizeImage(this,140,105)" onerror="errorImage(this)"></a>
-</div>
-<div class="txt-box">
-<h3>
-<a target="_blank" href="/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzPl4VzvErOTbivvQVu4bBhZQPCbvZOQGVqXa8Fplpd9gpbZ13sMy0YKBuawO4Al9p6sXm9nzUrsDuK8RrZooAi_yZrgSVQXesEopzirXgiufbkWKS4_-eJS7OsgmofcjA8RUvnXa1ogrCv4zeEunZkxZsofBsfXl-p735WGLxpNJJa-ID4v1TZVaWYnRjPB_P8hLSaRG75eE9Gdch3BsRJ6VKrzu_4XKA..&amp;type=2&amp;query=%E9%AB%98%E8%80%83&amp;token=7ADA241113B0D0A8D8DEF3CDCE13B280D9A722D0676BD44A" id="sogou_vr_11002601_title_0" uigs="article_title_0"><em><!--red_beg-->高考<!--red_end--></em>誓师变成鬼畜,并不是年轻人的问题</a>
-</h3>
-<p class="txt-info" id="sogou_vr_11002601_summary_0"><em><!--red_beg-->高考<!--red_end--></em>誓师仪式不在乎能否真实的提搞<em><!--red_beg-->高考<!--red_end--></em>试成绩、达成何种绩效.这种形式足够有效,能把抽象概念中的<em><!--red_beg-->高考<!--red_end--></em>,具象成操场上黑压压一...</p>
-<div class="s-p">
-<span class="all-time-y2">新潮沉思录</span><span class="s2"><script>document.write(timeConvert('1712410532'))</script></span>
-</div>
-</div>
-</li>
-
-		<!-- z -->
-	
-		<!-- a -->
-		<li id="sogou_vr_11002601_box_1" d="ab735a258a90e8e1-6bee54fcbd896b2a-44579cb3d426705c06ec435090144b0c">
-<div class="img-box">
-<a data-z="art" target="_blank" id="sogou_vr_11002601_img_1" href="/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzPl4VzvErOTbivvQVu4bBhZQPCbvZOQGVqXa8Fplpd9mLK6tA2WUZ_RkxVe4yzVi5ZHJrZy1nbR6SnDXRijf02ZHn2ZxPjb17hwJiqM1WjimGMsksYRZuQL9s-YgDoRL2SMgJIasLjj6hfhPUer-Q3d0oealLp5W8I9qOXZKT7_3Sof6yLi0PWzkNe_Wy94dv3eF179kYPvZ0V0tVLEVUyjotuuiAmOIg..&amp;type=2&amp;query=%E9%AB%98%E8%80%83&amp;token=7ADA241113B0D0A8D8DEF3CDCE13B280D9A722D0676BD44A" uigs="article_image_1"><img src="//img01.sogoucdn.com/v2/thumb?appid=201147&amp;url=https%3A%2F%2Fmmbiz.qpic.cn%2Fmmbiz_jpg%2F1hTqw7Ncp2eJzJJcMdCR940ASquich2cJAB1GicFHicAAA644TFM2SWDcnXWWHubYM857gicM8joJ8kiaNMkzZRIftA%2F0%3Fwx_fmt%3Djpeg&amp;sign=745dce69cfd197e7efe95e86f8818001" onload="resizeImage(this,140,105)" onerror="errorImage(this)"></a>
-</div>
-<div class="txt-box">
-<h3>
-<a target="_blank" href="/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzPl4VzvErOTbivvQVu4bBhZQPCbvZOQGVqXa8Fplpd9mLK6tA2WUZ_RkxVe4yzVi5ZHJrZy1nbR6SnDXRijf02ZHn2ZxPjb17hwJiqM1WjimGMsksYRZuQL9s-YgDoRL2SMgJIasLjj6hfhPUer-Q3d0oealLp5W8I9qOXZKT7_3Sof6yLi0PWzkNe_Wy94dv3eF179kYPvZ0V0tVLEVUyjotuuiAmOIg..&amp;type=2&amp;query=%E9%AB%98%E8%80%83&amp;token=7ADA241113B0D0A8D8DEF3CDCE13B280D9A722D0676BD44A" id="sogou_vr_11002601_title_1" uigs="article_title_1">事关<em><!--red_beg-->高考<!--red_end--></em>!省教育招生考试院最新发布</a>
-</h3>
-<p class="txt-info" id="sogou_vr_11002601_summary_1">✪事关<em><!--red_beg-->高考<!--red_end--></em>!省教育招生考试院最新发布!2023年<em><!--red_beg-->高考<!--red_end--></em>临近,为了确保广大考生可以顺利参加考试,省教育招生考试院发布安徽省...</p>
-<div class="s-p">
-<span class="all-time-y2">安徽共青团</span><span class="s2"><script>document.write(timeConvert('1685932999'))</script></span>
-</div>
-</div>
-</li>
-
-		<!-- z -->
-	
-		<!-- a -->
-		<li id="sogou_vr_11002601_box_2" d="ab735a258a90e8e1-6bee54fcbd896b2a-35d4b25e6f1c22ff0f59741cd1fe96a3">
-<div class="img-box">
-<a data-z="art" target="_blank" id="sogou_vr_11002601_img_2" href="/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzPl4VzvErOTbivvQVu4bBhZQPCbvZOQGVqXa8Fplpd9TG4YIdHYtK9ZTcChcHCK9ndnuFwF4wnrtWO0baaZZhO9z2f1M3-qztoA_BkW40chZyZX_9B3NEpNmCd-Aw8FIUa3fyNvORzwOm-JPHG7fEh6-L8sHgW-4LoxuLFYWTPSQTzgkGYuKSpWBQeVjISCMQrWq9PXG2rjaU9fUEpdij1j32-j2KiwUw..&amp;type=2&amp;query=%E9%AB%98%E8%80%83&amp;token=7ADA241113B0D0A8D8DEF3CDCE13B280D9A722D0676BD44A" uigs="article_image_2"><img src="//img01.sogoucdn.com/v2/thumb?appid=201147&amp;url=https%3A%2F%2Fmmbiz.qpic.cn%2Fsz_mmbiz_jpg%2FWgF7nzej1niaNb9DVzow8oz37UhNnn5JASNcgS4DcLmvHavvkSPJjmk2m81mDuExichGUQyHl3N2ZjULrwZwLgMQ%2F0%3Fwx_fmt%3Djpeg&amp;sign=2de768c93b2a9119cee20f6e85c10874" onload="resizeImage(this,140,105)" onerror="errorImage(this)"></a>
-</div>
-<div class="txt-box">
-<h3>
-<a target="_blank" href="/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzPl4VzvErOTbivvQVu4bBhZQPCbvZOQGVqXa8Fplpd9TG4YIdHYtK9ZTcChcHCK9ndnuFwF4wnrtWO0baaZZhO9z2f1M3-qztoA_BkW40chZyZX_9B3NEpNmCd-Aw8FIUa3fyNvORzwOm-JPHG7fEh6-L8sHgW-4LoxuLFYWTPSQTzgkGYuKSpWBQeVjISCMQrWq9PXG2rjaU9fUEpdij1j32-j2KiwUw..&amp;type=2&amp;query=%E9%AB%98%E8%80%83&amp;token=7ADA241113B0D0A8D8DEF3CDCE13B280D9A722D0676BD44A" id="sogou_vr_11002601_title_2" uigs="article_title_2">12月25日【<em><!--red_beg-->高考<!--red_end--></em>日报】距离<em><!--red_beg-->高考<!--red_end--></em>164天【今日介绍-航空航天工程】</a>
-</h3>
-<p class="txt-info" id="sogou_vr_11002601_summary_2">12月25日【<em><!--red_beg-->高考<!--red_end--></em>日报】距离<em><!--red_beg-->高考<!--red_end--></em>还有164天今日介绍-航空航天工程【主要研究航空电子系统、飞行器的设计、制造等方面的基本知识和...</p>
-<div class="s-p">
-<span class="all-time-y2">优加志愿</span><span class="s2"><script>document.write(timeConvert('1735118062'))</script></span>
-</div>
-</div>
-</li>
-
-		<!-- z -->
-	
-		<!-- a -->
-		<li id="sogou_vr_11002601_box_3" d="ab735a258a90e8e1-6bee54fcbd896b2a-bfa05a6f53e4c7228bd44b7f1dc2f3f3">
-<div class="img-box">
-<a data-z="art" target="_blank" id="sogou_vr_11002601_img_3" href="/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzPl4VzvErOTbivvQVu4bBhZQPCbvZOQGVqXa8Fplpd96pJro_9a6i_iOGmO2-EQPWKn3hz8qa5F0WbWVtF6PVPmZFCZXZZEQsw00LebK6x7i6dr94viLhoa80bz_4vD2UVuG3pdRQdGEaVJrRcpjq4FVF8CGgEOBTaJXBue3mIify4FF4XSwxvrhE5hoCLbbMrgGBWzQw-AJJvWUhcvYgjm0CtGSSkZQQ..&amp;type=2&amp;query=%E9%AB%98%E8%80%83&amp;token=7ADA241113B0D0A8D8DEF3CDCE13B280D9A722D0676BD44A" uigs="article_image_3"><img src="//img01.sogoucdn.com/v2/thumb?appid=201147&amp;url=https%3A%2F%2Fmmbiz.qpic.cn%2Fsz_mmbiz_jpg%2FuHfE2mv2lRib3uwkCiamicJaazzU0iaboZzRdHK2w0ibHtPic82HeXHpgPbOmYb1QQO6mjUmp9BBzuNmA193dw5y7yIg%2F0%3Fwx_fmt%3Djpeg&amp;sign=f5ce2b8886d0f7d4ef648990e2eef806" onload="resizeImage(this,140,105)" onerror="errorImage(this)"></a>
-</div>
-<div class="txt-box">
-<h3>
-<a target="_blank" href="/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzPl4VzvErOTbivvQVu4bBhZQPCbvZOQGVqXa8Fplpd96pJro_9a6i_iOGmO2-EQPWKn3hz8qa5F0WbWVtF6PVPmZFCZXZZEQsw00LebK6x7i6dr94viLhoa80bz_4vD2UVuG3pdRQdGEaVJrRcpjq4FVF8CGgEOBTaJXBue3mIify4FF4XSwxvrhE5hoCLbbMrgGBWzQw-AJJvWUhcvYgjm0CtGSSkZQQ..&amp;type=2&amp;query=%E9%AB%98%E8%80%83&amp;token=7ADA241113B0D0A8D8DEF3CDCE13B280D9A722D0676BD44A" id="sogou_vr_11002601_title_3" uigs="article_title_3">直播预告:前程优翼助你明确<em><!--red_beg-->高考<!--red_end--></em>目标!</a>
-</h3>
-<p class="txt-info" id="sogou_vr_11002601_summary_3"><em><!--red_beg-->高考<!--red_end--></em>倒计时仅160多天,你还没定好目标和专业吗?#<em><!--red_beg-->高考<!--red_end--></em>#热门专业#就业#新<em><!--red_beg-->高考<!--red_end--></em></p>
-<div class="s-p">
-<span class="all-time-y2">前程优翼</span><span class="s2"><script>document.write(timeConvert('1735119123'))</script></span>
-</div>
-</div>
-</li>
-
-		<!-- z -->
-	
-		<!-- a -->
-		<li id="sogou_vr_11002601_box_4" d="ab735a258a90e8e1-6bee54fcbd896b2a-bcd8c6929367f4d9e17f1497c65cf1cf">
-<div class="img-box">
-<a data-z="art" target="_blank" id="sogou_vr_11002601_img_4" href="/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzPl4VzvErOTbivvQVu4bBhZQPCbvZOQGVqXa8Fplpd9H9TP3iE8M_Z1_YQlL6PpuTyVgNTWTPp_-PsbykqM-IIQDpHXg-rv9BHUcLYXBbq-E0LWkAiHj8j2nTW-zk9slJQ2QHV1p9bCwuVe82aFtGHJlQLXgw4WzYgjcdfwv3QWjDnyKmhRYZCQ-p9SzqvDdJGauoTMI5lFgcYsi9C9cSpflztgI7RZ1g..&amp;type=2&amp;query=%E9%AB%98%E8%80%83&amp;token=7ADA241113B0D0A8D8DEF3CDCE13B280D9A722D0676BD44A" uigs="article_image_4"><img src="//img01.sogoucdn.com/v2/thumb?appid=201147&amp;url=https%3A%2F%2Fmmbiz.qpic.cn%2Fsz_mmbiz_jpg%2FWzr6ebXWHmtLyVwQEgSHJLwDyTebmOBO7uEf9Bz7DyzumiczK50CiakPrm8wcRZicUHtkia39vnslsvkjBVx94AJ2g%2F0%3Fwx_fmt%3Djpeg&amp;sign=bf498f8ef532ec5cc6b8ea68e7f709a1" onload="resizeImage(this,140,105)" onerror="errorImage(this)"></a>
-</div>
-<div class="txt-box">
-<h3>
-<a target="_blank" href="/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzPl4VzvErOTbivvQVu4bBhZQPCbvZOQGVqXa8Fplpd9H9TP3iE8M_Z1_YQlL6PpuTyVgNTWTPp_-PsbykqM-IIQDpHXg-rv9BHUcLYXBbq-E0LWkAiHj8j2nTW-zk9slJQ2QHV1p9bCwuVe82aFtGHJlQLXgw4WzYgjcdfwv3QWjDnyKmhRYZCQ-p9SzqvDdJGauoTMI5lFgcYsi9C9cSpflztgI7RZ1g..&amp;type=2&amp;query=%E9%AB%98%E8%80%83&amp;token=7ADA241113B0D0A8D8DEF3CDCE13B280D9A722D0676BD44A" id="sogou_vr_11002601_title_4" uigs="article_title_4">关于领取2025年普通<em><!--red_beg-->高考<!--red_end--></em>适应性测试准考证的通知</a>
-</h3>
-<p class="txt-info" id="sogou_vr_11002601_summary_4">辖区考生及家长:      现将2025年普通<em><!--red_beg-->高考<!--red_end--></em>适应性测试准考证领取工作通知如下:     1.2024年12月26日(上午8:30-12:00,下午14:30-...</p>
-<div class="s-p">
-<span class="all-time-y2">西宁市城中区教育考试服务中心</span><span class="s2"><script>document.write(timeConvert('1735118615'))</script></span>
-</div>
-</div>
-</li>
-
-		<!-- z -->
-	
-		<!-- a -->
-		<li id="sogou_vr_11002601_box_5" d="ab735a258a90e8e1-6bee54fcbd896b2a-de578b92d53a2ab7d6f83738aa393dd8">
-<div class="img-box">
-<a data-z="art" target="_blank" id="sogou_vr_11002601_img_5" href="/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzPl4VzvErOTbivvQVu4bBhZQPCbvZOQGVqXa8Fplpd9C1V9cWBG0V_T8vrWvH4LX_2FYQHARCmV_2tm_c0nst3TP_ujFdMMVSnOcXNpYFnUO9Jc2jDmCZYoM5TxzdiFv1vKIiVpcavYlNejflunqxUA9VfuUXreFKHP3EUNNBVb7vPMztLtozfb6Ke4U3ya6EKaa7imyXROIw6eoozg4fzwdVqCwyPdzA..&amp;type=2&amp;query=%E9%AB%98%E8%80%83&amp;token=7ADA241113B0D0A8D8DEF3CDCE13B280D9A722D0676BD44A" uigs="article_image_5"><img src="//img01.sogoucdn.com/v2/thumb?appid=201147&amp;url=https%3A%2F%2Fmmbiz.qpic.cn%2Fsz_mmbiz_jpg%2FkEnEUkic7E2Via4sk0BH0bm79rXBznwpP2UreNsEfuTR3ic2DrNomibEZddk1sIP7THRdhatv3p8O91wsKsLQfibEYg%2F0%3Fwx_fmt%3Djpeg&amp;sign=0ceb11d0796baad87340c02b893a8eef" onload="resizeImage(this,140,105)" onerror="errorImage(this)"></a>
-</div>
-<div class="txt-box">
-<h3>
-<a target="_blank" href="/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzPl4VzvErOTbivvQVu4bBhZQPCbvZOQGVqXa8Fplpd9C1V9cWBG0V_T8vrWvH4LX_2FYQHARCmV_2tm_c0nst3TP_ujFdMMVSnOcXNpYFnUO9Jc2jDmCZYoM5TxzdiFv1vKIiVpcavYlNejflunqxUA9VfuUXreFKHP3EUNNBVb7vPMztLtozfb6Ke4U3ya6EKaa7imyXROIw6eoozg4fzwdVqCwyPdzA..&amp;type=2&amp;query=%E9%AB%98%E8%80%83&amp;token=7ADA241113B0D0A8D8DEF3CDCE13B280D9A722D0676BD44A" id="sogou_vr_11002601_title_5" uigs="article_title_5">近5年<em><!--red_beg-->高考<!--red_end--></em>命题内容及方向汇总,附新<em><!--red_beg-->高考<!--red_end--></em>应对之策!</a>
-</h3>
-<p class="txt-info" id="sogou_vr_11002601_summary_5">从2020 年至2024 年,中国教育部对<em><!--red_beg-->高考<!--red_end--></em>命题内容和方向进行了重要的调整和改革.这些改革旨在更好地适应新时代的要求,促进学生...</p>
-<div class="s-p">
-<span class="all-time-y2">天壹联盟</span><span class="s2"><script>document.write(timeConvert('1735118790'))</script></span>
-</div>
-</div>
-</li>
-
-		<!-- z -->
-	
-		<!-- a -->
-		<li id="sogou_vr_11002601_box_6" d="ab735a258a90e8e1-6bee54fcbd896b2a-903d83a897f02b2a1dd7bfdc2bdd027a">
-<div class="img-box">
-<a data-z="art" target="_blank" id="sogou_vr_11002601_img_6" href="/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzPl4VzvErOTbivvQVu4bBhZQPCbvZOQGVqXa8Fplpd993EZ2p7MH-3RT-V4JRCkT13WG5rGl3XoPsbE02dWPmVEnmMT51wT853Uyjc7U5AGnThH0FlPUQWgRb20WAi4hBBM_Lo5WmfAgQtn_EsZzboHdSGscVCiSgk0HChBAgnS_UJXmu-f_9yfKWWZtn5URDbq74y1_-kXWyJpZtN6UMGFW6cwuUnkdA..&amp;type=2&amp;query=%E9%AB%98%E8%80%83&amp;token=7ADA241113B0D0A8D8DEF3CDCE13B280D9A722D0676BD44A" uigs="article_image_6"><i></i><img src="//img01.sogoucdn.com/v2/thumb?appid=201147&amp;url=https%3A%2F%2Fmmbiz.qpic.cn%2Fmmbiz_jpg%2FY9icmJtMy9leJ7tP19eW4bbewetNv1DrWJWZCQl9CrZ8Q65d7mXYI7AAYUtLp6oh1WUnkNicXK3SdtKEooNoQusQ%2F0%3Fwx_fmt%3Djpeg&amp;sign=a64a6ba358f48d61eaa52d145c32ebc0" onload="resizeImage(this,140,105)" onerror="errorImage(this)"></a>
-</div>
-<div class="txt-box">
-<h3>
-<a target="_blank" href="/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzPl4VzvErOTbivvQVu4bBhZQPCbvZOQGVqXa8Fplpd993EZ2p7MH-3RT-V4JRCkT13WG5rGl3XoPsbE02dWPmVEnmMT51wT853Uyjc7U5AGnThH0FlPUQWgRb20WAi4hBBM_Lo5WmfAgQtn_EsZzboHdSGscVCiSgk0HChBAgnS_UJXmu-f_9yfKWWZtn5URDbq74y1_-kXWyJpZtN6UMGFW6cwuUnkdA..&amp;type=2&amp;query=%E9%AB%98%E8%80%83&amp;token=7ADA241113B0D0A8D8DEF3CDCE13B280D9A722D0676BD44A" id="sogou_vr_11002601_title_6" uigs="article_title_6">2025河北<em><!--red_beg-->高考<!--red_end--></em>报考方法与技巧;附:河北<em><!--red_beg-->高考<!--red_end--></em>,500分能考哪个大学?</a>
-</h3>
-<p class="txt-info" id="sogou_vr_11002601_summary_6">2025河北<em><!--red_beg-->高考<!--red_end--></em>报考方法与技巧2024年河北<em><!--red_beg-->高考<!--red_end--></em>试题相对简单,物理组的500分在全省排名为122624,历史组的500分在全省排名为...</p>
-<div class="s-p">
-<span class="all-time-y2">灵翰教育</span><span class="s2"><script>document.write(timeConvert('1735118120'))</script></span>
-</div>
-</div>
-</li>
-
-		<!-- z -->
-	
-		<!-- a -->
-		<li id="sogou_vr_11002601_box_7" d="ab735a258a90e8e1-6bee54fcbd896b2a-ea0575e637838e6425b0e7a13e0a3df9">
-<div class="img-box">
-<a data-z="art" target="_blank" id="sogou_vr_11002601_img_7" href="/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzPl4VzvErOTbivvQVu4bBhZQPCbvZOQGVqXa8Fplpd9Fg0DZFNu8UGfp8gudwoWiBrr61wiosNOI0sj1SPLVP5I9R_DbYZcdgvJ2mX31Dj1MgJys4w4B8d8H_0iKW1p_f7-g_0iQJM5_ryzvPSFWKbThMtJPoShrOyNZbZT7c6-v8b7z8HhjJ3gz5yA3cxjfPyBE2Jrr9Jjf4-5bFOiTXMC2Qmj7RgGwQ..&amp;type=2&amp;query=%E9%AB%98%E8%80%83&amp;token=7ADA241113B0D0A8D8DEF3CDCE13B280D9A722D0676BD44A" uigs="article_image_7"><img src="//img01.sogoucdn.com/v2/thumb?appid=201147&amp;url=https%3A%2F%2Fmmbiz.qpic.cn%2Fsz_mmbiz_jpg%2FmIaAF5BicIuovYyWqXTftSxyGibLDshQ199DEhZVyriboPpeHkm35liaWmzjk7esCGe5KicaALWY3D3CpxP2HVvB5qw%2F0%3Fwx_fmt%3Djpeg&amp;sign=fecb64e10bf690d55e5a7b609fbe2bfc" onload="resizeImage(this,140,105)" onerror="errorImage(this)"></a>
-</div>
-<div class="txt-box">
-<h3>
-<a target="_blank" href="/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzPl4VzvErOTbivvQVu4bBhZQPCbvZOQGVqXa8Fplpd9Fg0DZFNu8UGfp8gudwoWiBrr61wiosNOI0sj1SPLVP5I9R_DbYZcdgvJ2mX31Dj1MgJys4w4B8d8H_0iKW1p_f7-g_0iQJM5_ryzvPSFWKbThMtJPoShrOyNZbZT7c6-v8b7z8HhjJ3gz5yA3cxjfPyBE2Jrr9Jjf4-5bFOiTXMC2Qmj7RgGwQ..&amp;type=2&amp;query=%E9%AB%98%E8%80%83&amp;token=7ADA241113B0D0A8D8DEF3CDCE13B280D9A722D0676BD44A" id="sogou_vr_11002601_title_7" uigs="article_title_7">【成人<em><!--red_beg-->高考<!--red_end--></em>】,2025成人<em><!--red_beg-->高考<!--red_end--></em>你一定要知道的事!</a>
-</h3>
-<p class="txt-info" id="sogou_vr_11002601_summary_7">成人<em><!--red_beg-->高考<!--red_end--></em>的专业超级丰富,近百个专业.当然这么多专业,根据自身的需要来选择就好了.也可以根据自己的兴趣爱好或者以后的工作...</p>
-<div class="s-p">
-<span class="all-time-y2">襄阳容大</span><span class="s2"><script>document.write(timeConvert('1735118200'))</script></span>
-</div>
-</div>
-</li>
-
-		<!-- z -->
-	
-		<!-- a -->
-		<li id="sogou_vr_11002601_box_8" d="ab735a258a90e8e1-6bee54fcbd896b2a-1a428d29184d728e9fe91bacb958df6a">
-<div class="img-box">
-<a data-z="art" target="_blank" id="sogou_vr_11002601_img_8" href="/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzPl4VzvErOTbivvQVu4bBhZQPCbvZOQGVqXa8Fplpd9rE_LsEUCWk_McFcUq09wH047o7elHSWdfWi6Afpgak_-bCfdTfNPGPpTlf6uM-_fmXvjA63hzXvFXsZnKAUF2ds8JNhSFVgM0FvsDKroXWfU5LW7boSkalPa_JeiFvKkVjfEkAaYwI_p0X3EGFo3Q4jxfYw6N_C_9C3RgApz42QNGbbB75bUeA..&amp;type=2&amp;query=%E9%AB%98%E8%80%83&amp;token=7ADA241113B0D0A8D8DEF3CDCE13B280D9A722D0676BD44A" uigs="article_image_8"><img src="//img01.sogoucdn.com/v2/thumb?appid=201147&amp;url=https%3A%2F%2Fmmbiz.qpic.cn%2Fmmbiz_jpg%2FnKta9W8xClynKtjbmBJUJFlPlwnqn9YJTG1TIzZoGesP50PNRNCIwr6CmiaZLQOK3Js3KZ4QCNX5UxBzCaXYqIw%2F0%3Fwx_fmt%3Djpeg&amp;sign=70a066370705dc286d379265f2e87f26" onload="resizeImage(this,140,105)" onerror="errorImage(this)"></a>
-</div>
-<div class="txt-box">
-<h3>
-<a target="_blank" href="/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzPl4VzvErOTbivvQVu4bBhZQPCbvZOQGVqXa8Fplpd9rE_LsEUCWk_McFcUq09wH047o7elHSWdfWi6Afpgak_-bCfdTfNPGPpTlf6uM-_fmXvjA63hzXvFXsZnKAUF2ds8JNhSFVgM0FvsDKroXWfU5LW7boSkalPa_JeiFvKkVjfEkAaYwI_p0X3EGFo3Q4jxfYw6N_C_9C3RgApz42QNGbbB75bUeA..&amp;type=2&amp;query=%E9%AB%98%E8%80%83&amp;token=7ADA241113B0D0A8D8DEF3CDCE13B280D9A722D0676BD44A" id="sogou_vr_11002601_title_8" uigs="article_title_8">2025湖南<em><!--red_beg-->高考<!--red_end--></em>报名VIP通道</a>
-</h3>
-<p class="txt-info" id="sogou_vr_11002601_summary_8">考虑到大部分往届生、技校生、辍学考生以及外省就读考生等,由于缺乏自主完成<em><!--red_beg-->高考<!--red_end--></em>报名的经验,本平台特地联合湖南省权威教育平...</p>
-<div class="s-p">
-<span class="all-time-y2">湘学新象</span><span class="s2"><script>document.write(timeConvert('1735119714'))</script></span>
-</div>
-</div>
-</li>
-
-		<!-- z -->
-	
-		<!-- a -->
-		<li id="sogou_vr_11002601_box_9" d="ab735a258a90e8e1-6bee54fcbd896b2a-bced37130085994aecc2493d2c40aa8e">
-<div class="img-box">
-<a data-z="art" target="_blank" id="sogou_vr_11002601_img_9" href="/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzPl4VzvErOTbivvQVu4bBhZQPCbvZOQGVqXa8Fplpd9AgCMlhSCACiL0Td29-jTbUVSpr3C0OzpB8EJtUlaRBtNDpiP2g2eKZ33JAnRvOyJCQYB30r5pXRH38U9dVTS_6QAqKd4nB_LCmiWvsJKCpst3Rihe4GmyVuhYXdF_9AkYyp5LQldrJJ1-L35FiVQUJXNZIS7XYvI37LLe-JFCzkHpHkoPMgL3A..&amp;type=2&amp;query=%E9%AB%98%E8%80%83&amp;token=7ADA241113B0D0A8D8DEF3CDCE13B280D9A722D0676BD44A" uigs="article_image_9"><img src="//img01.sogoucdn.com/v2/thumb?appid=201147&amp;url=https%3A%2F%2Fmmbiz.qpic.cn%2Fsz_mmbiz_jpg%2FvicnwFVEia5Pnxy4bqs1oialpvqqB3RQOhmkGskbx8GvsQR9ytNykbMQwQo5FSKiarEvXbHO72NUNdHqPQPRXT4JfA%2F0%3Fwx_fmt%3Djpeg&amp;sign=f6d15cb50a17090ca4bd4b02818cc7e8" onload="resizeImage(this,140,105)" onerror="errorImage(this)"></a>
-</div>
-<div class="txt-box">
-<h3>
-<a target="_blank" href="/link?url=dn9a_-gY295K0Rci_xozVXfdMkSQTLW6cwJThYulHEtVjXrGTiVgSzPl4VzvErOTbivvQVu4bBhZQPCbvZOQGVqXa8Fplpd9AgCMlhSCACiL0Td29-jTbUVSpr3C0OzpB8EJtUlaRBtNDpiP2g2eKZ33JAnRvOyJCQYB30r5pXRH38U9dVTS_6QAqKd4nB_LCmiWvsJKCpst3Rihe4GmyVuhYXdF_9AkYyp5LQldrJJ1-L35FiVQUJXNZIS7XYvI37LLe-JFCzkHpHkoPMgL3A..&amp;type=2&amp;query=%E9%AB%98%E8%80%83&amp;token=7ADA241113B0D0A8D8DEF3CDCE13B280D9A722D0676BD44A" id="sogou_vr_11002601_title_9" uigs="article_title_9">有关<em><!--red_beg-->高考<!--red_end--></em>,成绩可查&rarr;</a>
-</h3>
-<p class="txt-info" id="sogou_vr_11002601_summary_9">12月24日,甘肃省教育考试院公布2025年甘肃省<em><!--red_beg-->高考<!--red_end--></em>美术与设计类、书法类专业统一考试成绩.据悉,2025年甘肃省普通高校招生美...</p>
-<div class="s-p">
-<span class="all-time-y2">今日文萃岷州</span><span class="s2"><script>document.write(timeConvert('1735118985'))</script></span>
-</div>
-</div>
-</li>
-
-		<!-- z -->
-	
-</ul>
-    
-<div class="p-fy" id="pagebar_container">
-	<span>1</span><a id="sogou_page_2" href="?oq=&query=%E9%AB%98%E8%80%83&_sug_type_=1&sut=0&lkt=0%2C0%2C0&s_from=input&ri=0&_sug_=n&type=2&sst0=1735119944328&page=2&ie=utf8&p=40040108&dp=1&w=01015002&dr=1" uigs="page_2">2</a><a id="sogou_page_3" href="?oq=&query=%E9%AB%98%E8%80%83&_sug_type_=1&sut=0&lkt=0%2C0%2C0&s_from=input&ri=0&_sug_=n&type=2&sst0=1735119944328&page=3&ie=utf8&p=40040108&dp=1&w=01015002&dr=1" uigs="page_3">3</a><a id="sogou_page_4" href="?oq=&query=%E9%AB%98%E8%80%83&_sug_type_=1&sut=0&lkt=0%2C0%2C0&s_from=input&ri=0&_sug_=n&type=2&sst0=1735119944328&page=4&ie=utf8&p=40040108&dp=1&w=01015002&dr=1" uigs="page_4">4</a><a id="sogou_page_5" href="?oq=&query=%E9%AB%98%E8%80%83&_sug_type_=1&sut=0&lkt=0%2C0%2C0&s_from=input&ri=0&_sug_=n&type=2&sst0=1735119944328&page=5&ie=utf8&p=40040108&dp=1&w=01015002&dr=1" uigs="page_5">5</a><a id="sogou_page_6" href="?oq=&query=%E9%AB%98%E8%80%83&_sug_type_=1&sut=0&lkt=0%2C0%2C0&s_from=input&ri=0&_sug_=n&type=2&sst0=1735119944328&page=6&ie=utf8&p=40040108&dp=1&w=01015002&dr=1" uigs="page_6">6</a><a id="sogou_page_7" href="?oq=&query=%E9%AB%98%E8%80%83&_sug_type_=1&sut=0&lkt=0%2C0%2C0&s_from=input&ri=0&_sug_=n&type=2&sst0=1735119944328&page=7&ie=utf8&p=40040108&dp=1&w=01015002&dr=1" uigs="page_7">7</a><a id="sogou_page_8" href="?oq=&query=%E9%AB%98%E8%80%83&_sug_type_=1&sut=0&lkt=0%2C0%2C0&s_from=input&ri=0&_sug_=n&type=2&sst0=1735119944328&page=8&ie=utf8&p=40040108&dp=1&w=01015002&dr=1" uigs="page_8">8</a><a id="sogou_page_9" href="?oq=&query=%E9%AB%98%E8%80%83&_sug_type_=1&sut=0&lkt=0%2C0%2C0&s_from=input&ri=0&_sug_=n&type=2&sst0=1735119944328&page=9&ie=utf8&p=40040108&dp=1&w=01015002&dr=1" uigs="page_9">9</a><a id="sogou_page_10" href="?oq=&query=%E9%AB%98%E8%80%83&_sug_type_=1&sut=0&lkt=0%2C0%2C0&s_from=input&ri=0&_sug_=n&type=2&sst0=1735119944328&page=10&ie=utf8&p=40040108&dp=1&w=01015002&dr=1" uigs="page_10">10</a>
-			<a id="sogou_next" href="?oq=&query=%E9%AB%98%E8%80%83&_sug_type_=1&sut=0&lkt=0%2C0%2C0&s_from=input&ri=0&_sug_=n&type=2&sst0=1735119944328&page=2&ie=utf8&p=40040108&dp=1&w=01015002&dr=1" class="np" uigs="page_next">下一页</a>
-		
-		<div class="mun">找到约3,523条结果<!--resultbarnum:3,523--></div>
-</div>
-    
-</div>
-
-
-        </div>
-        
-            <div class="snb-right" id="right">
-                
-            </div>
-        
-    </div>
-    <div class="back-top" style="display: none;"><a href="javascript:void(0);" uigs="other_float_back_top"></a></div>
-    
-    <div class="bottom-form">
-        
-
-<form name="searchForm" action="/weixin">
-    <div class="querybox">
-        <div class="qborder">
-            <div class="qborder2">
-                <input type="hidden" name="type" value="2"/>
-                <input type="hidden" name="s_from" value="input"/>
-                <input type="text" class="query" name="query" id="query" ov="高考" value="高考" autocomplete="off"/>
-                
-                    <input type="hidden" name="ie" value="utf8"/>
-                
-                <a href="javascript:void(0)" class="qreset2" name="reset" uigs="search_reset"></a>
-            </div>
-        </div>
-        <input type="button" value="搜文章" class="swz" onclick="search(this,2)" uigs="search_article"/>
-        <input type="hidden" name="_sug_" value="n"/>
-        <input type="hidden" name="_sug_type_" value=""/>
-    </div>
-</form>
-    </div>
-
-<div class="footer-box" id="s_footer">
-    <div class="footer">
-        <a id="sogou_webhelp" href="http://help.sogou.com/" target="_blank" uigs="bottom_ssbz">搜索帮助</a>&nbsp;<a href="https://fankui.sogou.com/index.php/web/web/index/type/4" target="_blank" uigs="bottom_yjfk">意见反馈及投诉</a>&nbsp;&copy;&nbsp;2024&nbsp;SOGOU.COM&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.sogou.com/docs/terms.htm" target="_blank" uigs="bottom_mzsm">免责声明</a>&nbsp;<a href="http://corp.sogou.com/private.html" target="_blank" uigs="bottom_yszc">隐私政策</a>
-    </div>
-</div>
-    
-        <script src="/new/pc/js/article.min.js?v=20161212"></script>
-    
-    <script>
-        var WX_SUGG_PAGE_FROM="pcArtSearch";
-        
-        var SugPara = {
-            "bigsize":true,
-            "enableSug":true,
-            "sugType":"wxart",
-            "domain":"w.sugg.sogou.com",
-            "productId":"web",
-            "sugFormName":"sf",
-            "submitId":"stb",
-            "suggestRid":"01015002",
-            "normalRid":"01019900",
-            "oms":1,
-            "nofixwidth":1,
-            "useParent":1
-        };
-        uigs_para.exp_id = "null_0-null_1-null_2-null_3-null_4-null_5-null_6-null_7-null_8-null_9-";
-        uigs_para.exp_id = uigs_para.exp_id.substring(0, uigs_para.exp_id.length - 1);
-    </script>
-    <script src="/new/weixin/js/uigs.min.js?v=20180607"></script>
-    <script src="/new/pc/js/log.min.js?v=20170321"></script>
-    <script src="/new/pc/js/event.min.js?v=20190822"></script>
-    <script src="/new/pc/js/search.min.js?v=20161107"></script>
-    <script src="/new/pc/js/suggestion.js?v=20231218"></script>
-    <script src="/new/weixin/js/form.min.js?v=20170101"></script>
-    
-
-<script>
-    (function(){$("a").on("mousedown click contextmenu",function(){var b=Math.floor(100*Math.random())+1,a=this.href.indexOf("url="),c=this.href.indexOf("&k=");-1!==a&&-1===c&&(a=this.href.substr(a+4+parseInt("21")+b,1),this.href+="&k="+b+"&h="+a)})})();
-</script>
-
-    <script defer async type="text/javascript" src="//dlweb.sogoucdn.com/barrier_free/pc/wzaV10/aria.js?appid=c4d5562ec7daa12a5a351cbe1a292da1" charset="utf-8"></script>
-</body>
+  </body>
+  <style>
+ 
+    /*! shape-shifter 2013-08-14 */
+/*! normalize.css v2.0.1 | MIT License | git.io/normalize */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+    display: block
+}
+ 
+audio,
+canvas,
+video {
+    display: inline-block
+}
+ 
+audio:not([controls]) {
+    display: none;
+    height: 0
+}
+ 
+[hidden] {
+    display: none
+}
+ 
+html {
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%
+}
+ 
+body {
+    margin: 0
+}
+ 
+a:focus {
+    outline: thin dotted
+}
+ 
+a:active,
+a:hover {
+    outline: 0
+}
+ 
+h1 {
+    font-size: 2em
+}
+ 
+abbr[title] {
+    border-bottom: 1px dotted
+}
+ 
+b,
+strong {
+    font-weight: 700
+}
+ 
+dfn {
+    font-style: italic
+}
+ 
+mark {
+    background: #ff0;
+    color: #000
+}
+ 
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, serif;
+    font-size: 1em
+}
+ 
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word
+}
+ 
+q {
+    quotes: "\201C" "\201D" "\2018" "\2019"
+}
+ 
+small {
+    font-size: 80%
+}
+ 
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline
+}
+ 
+sup {
+    top: -.5em
+}
+ 
+sub {
+    bottom: -.25em
+}
+ 
+img {
+    border: 0
+}
+ 
+svg:not(:root) {
+    overflow: hidden
+}
+ 
+figure {
+    margin: 0
+}
+ 
+fieldset {
+    border: 1px solid silver;
+    margin: 0 2px;
+    padding: .35em .625em .75em
+}
+ 
+legend {
+    border: 0;
+    padding: 0
+}
+ 
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0
+}
+ 
+button,
+input {
+    line-height: normal
+}
+ 
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+    -webkit-appearance: button;
+    cursor: pointer
+}
+ 
+button[disabled],
+input[disabled] {
+    cursor: default
+}
+ 
+input[type=checkbox],
+input[type=radio] {
+    box-sizing: border-box;
+    padding: 0
+}
+ 
+input[type=search] {
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box
+}
+ 
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
+    -webkit-appearance: none
+}
+ 
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0
+}
+ 
+textarea {
+    overflow: auto;
+    vertical-align: top
+}
+ 
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+ 
+body {
+    font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: #000000;
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5em
+}
+ 
+h1 {
+    color: #111;
+    margin: 0 0 12px;
+    font-size: 24px;
+    line-height: 1.5em
+}
+ 
+p {
+    margin: 0 0 10x
+}
+ 
+a {
+    color: #888;
+    text-decoration: none;
+    border-bottom: 1px solid #ccc
+}
+ 
+a:hover {
+    border-bottom-color: #888
+}
+ 
+body,
+.overlay {
+    -webkit-perspective: 1000;
+    -webkit-perspective-origin-y: 25%
+}
+ 
+.body--ready {
+    background: -webkit-linear-gradient(top, #000000 0, #000000 120%);
+    background: -moz-linear-gradient(top, #000000 0, #000000 120%);
+    background: -o-linear-gradient(top, #000000 0, #000000 120%);
+    background: -ms-linear-gradient(top, #000000 0, #000000 120%);
+    background: linear-gradient(top, #000000 0, #000000 120%)
+}
+ 
+.body--ready .overlay {
+    -webkit-transition: -webkit-transform .7s cubic-bezier(0.694, .0482, .335, 1), opacity .7s cubic-bezier(0.694, .0482, .335, 1);
+    -moz-transition: -moz-transform .7s cubic-bezier(0.694, .0482, .335, 1), opacity .7s cubic-bezier(0.694, .0482, .335, 1);
+    -ms-transition: -ms-transform .7s cubic-bezier(0.694, .0482, .335, 1), opacity .7s cubic-bezier(0.694, .0482, .335, 1);
+    -o-transition: -o-transform .7s cubic-bezier(0.694, .0482, .335, 1), opacity .7s cubic-bezier(0.694, .0482, .335, 1);
+    transition: transform .7s cubic-bezier(0.694, .0482, .335, 1), opacity .7s cubic-bezier(0.694, .0482, .335, 1)
+}
+ 
+.body--ready .ui,
+.body--ready .help {
+    display: block
+}
+ 
+.ui {
+    display: none;
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    width: 300px;
+    margin-left: -150px
+}
+ 
+.ui-input {
+    width: 100%;
+    height: 50px;
+    background: 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    border: 0;
+    border-bottom: 2px solid #fff
+}
+ 
+.ui-input:focus {
+    outline: 0;
+    border: 0;
+    border-bottom: 2px solid #fff
+}
+ 
+.ui-return {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    padding: 3px 2px 0;
+    font-size: 10px;
+    line-height: 10px;
+    color: #fff;
+    border: 1px solid #fff
+}
+ 
+.ui--enter .ui-return {
+    display: block
+}
+ 
+.ui--wide {
+    width: 76%;
+    margin-left: 12%;
+    left: 0
+}
+ 
+.ui--wide .ui-return {
+    right: -20px
+}
+ 
+.help {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 27px;
+    font-weight: 700;
+    cursor: pointer;
+    background: #fff;
+    color: #79a8ae;
+    opacity: .9;
+    -webkit-transition: opacity .1s cubic-bezier(0.694, .0482, .335, 1);
+    -moz-transition: opacity .1s cubic-bezier(0.694, .0482, .335, 1);
+    -ms-transition: opacity .1s cubic-bezier(0.694, .0482, .335, 1);
+    -o-transition: opacity .1s cubic-bezier(0.694, .0482, .335, 1);
+    transition: opacity .1s cubic-bezier(0.694, .0482, .335, 1)
+}
+ 
+.help:hover {
+    opacity: 1
+}
+ 
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 550px;
+    height: 490px;
+    margin: -260px 0 0 -275px;
+    opacity: 0;
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+    transform: rotateY(90deg)
+}
+ 
+.overlay--visible {
+    opacity: 1;
+    -webkit-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+    -ms-transform: rotateY(0);
+    -o-transform: rotateY(0);
+    transform: rotateY(0)
+}
+ 
+.ui-share,
+.ui-details {
+    opacity: .9;
+    background: #fff;
+    z-index: 2
+}
+ 
+.ui-details-content,
+.ui-share-content {
+    padding: 100px 50px
+}
+ 
+.commands {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    cursor: pointer
+}
+ 
+.commands-item {
+    font-size: 12px;
+    line-height: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 20px;
+    background: #fff;
+    margin-top: 1px;
+    color: #333;
+    opacity: .9;
+    -webkit-transition: -webkit-transform .7s cubic-bezier(0.694, .0482, .335, 1), opacity .1s cubic-bezier(0.694, .0482, .335, 1);
+    -moz-transition: -moz-transform .1s cubic-bezier(0.694, .0482, .335, 1), opacity .1s cubic-bezier(0.694, .0482, .335, 1);
+    -ms-transition: -ms-transform .1s cubic-bezier(0.694, .0482, .335, 1), opacity .1s cubic-bezier(0.694, .0482, .335, 1);
+    -o-transition: -o-transform .1s cubic-bezier(0.694, .0482, .335, 1), opacity .1s cubic-bezier(0.694, .0482, .335, 1);
+    transition: transform .1s cubic-bezier(0.694, .0482, .335, 1), opacity .1s cubic-bezier(0.694, .0482, .335, 1)
+}
+ 
+.commands-item--gap {
+    margin-top: 9px
+}
+ 
+.commands-item:hover {
+    opacity: 1
+}
+ 
+.commands-item:hover .commands-item-action {
+    background: #333
+}
+ 
+.commands-item a {
+    display: inline-block
+}
+ 
+.commands-item-mode {
+    display: inline-block;
+    margin-left: 3px;
+    font-style: italic;
+    color: #ccc
+}
+ 
+.commands-item-title {
+    display: inline-block;
+    width: 150px
+}
+ 
+.commands-item-info {
+    display: inline-block;
+    width: 300px;
+    font-size: 14px;
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: 400;
+    color: #aaa
+}
+ 
+.commands-item-action {
+    display: inline-block;
+    float: right;
+    margin-top: 3px;
+    text-transform: uppercase;
+    font-size: 10px;
+    line-height: 10px;
+    color: #fff;
+    background: #90c9d1;
+    padding: 5px 10px 4px;
+    border-radius: 3px
+}
+ 
+.commands-item:first-child {
+    margin-top: 0
+}
+ 
+.twitter-share {
+    position: absolute;
+    top: 4px;
+    right: 20px
+}
+ 
+.tabs-labels {
+    margin-bottom: 9px
+}
+ 
+.tabs-label {
+    display: inline-block;
+    background: #fff;
+    padding: 10px 20px;
+    font-size: 12px;
+    line-height: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #333;
+    opacity: .5;
+    cursor: pointer;
+    margin-right: 2px;
+    -webkit-transition: opacity .1s cubic-bezier(0.694, .0482, .335, 1);
+    -moz-transition: opacity .1s cubic-bezier(0.694, .0482, .335, 1);
+    -ms-transition: opacity .1s cubic-bezier(0.694, .0482, .335, 1);
+    -o-transition: opacity .1s cubic-bezier(0.694, .0482, .335, 1);
+    transition: opacity .1s cubic-bezier(0.694, .0482, .335, 1)
+}
+ 
+.tabs-label:hover {
+    opacity: .9
+}
+ 
+.tabs-label--active {
+    opacity: .9
+}
+ 
+.tabs-panel {
+    display: none
+}
+ 
+.tabs-panel--active {
+    display: block
+}
+ 
+.tab-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%
+}
+ 
+.touch .ui-input {
+    display: none
+}
+ 
+@media screen and (max-height:600px) {
+    .ui-input {
+        color: #111;
+        border-color: #111
+    }
+ 
+    .ui-input:focus {
+        border-color: #111
+    }
+}
+  </style>
 </html>
-<!--1735119946649-->
-<!--zly--><!--weixin-->
